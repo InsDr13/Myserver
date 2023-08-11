@@ -36,6 +36,7 @@
 					} else {
 						// showToast("Successfully sent with response");
 						console.log("Successfully sent with response: ", response);
+						res.send(response);
 					}
 
 						});
