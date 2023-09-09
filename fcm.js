@@ -1,11 +1,12 @@
     var express=require("express");
     var FCM = require('fcm-node');
+    var cors =require("cors");
     var serverKey = 'AAAA9CBzkDg:APA91bEKZYpsjeUQ0kDt5ALzsGe0fzKtOTs7LTY-j4wJTuA3n-4ORIIcqHZlI1aEHg96IL2rzj0L4cWCLjA-0SXispOegnFTPrdtVgopHYFXzUDWqzpr7Kj4WeDAOm8_uZqFvc5EuevO';
     var fcm = new FCM(serverKey);
-	var app=express();
+    var app=express();
+    var port=2500;
 	
-	var port=2500;
-	
+	app.use(cors());
 	app.listen(port,()=>{
 		console.log("listening on port", port )
 	});
